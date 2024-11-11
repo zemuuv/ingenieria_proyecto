@@ -1,0 +1,31 @@
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name = "ciudadano")
+public class Ciudadano {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nombres;
+    private String apellidos;
+    private String identificacion;
+
+    @Temporal(TemporalType.DATE)
+    private Date fechaNacimiento;
+
+    private String lugarNacimiento;
+
+    @Temporal(TemporalType.DATE)
+    private Date fechaExpedicion;
+
+    private String lugarExpedicion;
+    private String rh;
+    private String grupoSanguineo;
+    private Double estatura;
+
+    // Getters y Setters
+    // ...
+}
